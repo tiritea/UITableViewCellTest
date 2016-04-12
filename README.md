@@ -1,5 +1,5 @@
 # ios-uitableviewcelltest
-Test various permutations of the built-in UITableViewCell styles when &lt;BR>have *multi-line* text and detail, including using style-specific subclasses, style-specific reuse identifiers, numberOfLines=0 (vs n), and dequeuing-and-reusing cells vs re-allocing. Summary of observations:
+Test various permutations of the built-in UITableViewCell styles when have *multi-line* text and detail, including using style-specific subclasses, style-specific reuse identifiers, numberOfLines=0 (vs n), and dequeuing-and-reusing cells vs re-allocing. Summary of observations:
 <ul>
 <li>none of the built-in UITableViewCell styles handle multi-line detailTextLabel; invariably the cell height calculated by UITableViewAutomaticDimension does not take into account the multiple lines of detail and the cell is too short, causing the content to spill over the top and bottom of the cell. UITableViewCellStyleDefault ignores detailTextLabel so it is unaffected.
 <li>however, all the built-in UITableViewCell styles do appear to handle multiple lines of textLabel ok.
