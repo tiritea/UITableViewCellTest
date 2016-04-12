@@ -9,8 +9,8 @@ Test various permutations of the built-in UITableViewCell styles when have *mult
 </ul>
 <br>Conclusion:
 <ul>
-<li>numberOfLines=n doesnt do what you expect; always use numberOfLines=0 to show multiple lines. This wasnt expected.
-<li>Always use style-specific subclasses or reuseIdentifiers, because [cell initWithStyle:style reuseIdentifier:id] wont fully re-init, or 'clean', a reused cell. This wasnt expected.
-<li>You cant use any of the built-in UITableViewCellStyles to reliably multiple lines of *detail* - you'll have to create a UITableViewCell subclass instead. This is unfortunate.
+<li>numberOfLines=n doesnt do what you expect; always use numberOfLines=0 to show multiple lines. This was unexpected.
+<li>Always use style-specific subclasses or reuseIdentifiers, because [cell initWithStyle:style reuseIdentifier:id] wont fully re-init, or 'clean', a reused cell. This was unexpected.
+<li>You can't use any of the built-in UITableViewCellStyles to reliably multiple lines of *detail* - you'll have to create a UITableViewCell subclass instead. This is unfortunate, because it would make UITableViewCellStyleSubtitle a lot more useful.
 </ul>
 
